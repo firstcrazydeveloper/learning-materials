@@ -1,0 +1,31 @@
+<div class="mobile-fix-option"></div>
+  <div class="top-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="header-contact">
+            <ul>
+              <li>{{ topHeaderMessage }}</li>
+              <li *ngFor="let contact of contacts">
+                <i class="fa fa-phone" aria-hidden="true"></i>Call Us: {{contact}}
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6 text-right">
+          <ul class="header-dropdown">
+            <li class="mobile-wishlist">
+              <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+            </li>
+            <li class="onhover-dropdown mobile-account">
+              <i class="fa fa-user" aria-hidden="true"></i>
+              {{ myAccount }}
+              <ul class="onhover-show-div">
+                <li *ngFor="let menu of accountMenus"><a href="#" data-lng="en">{{menu}}</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>

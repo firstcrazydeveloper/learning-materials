@@ -1,0 +1,153 @@
+{
+  "version": 1,
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "defaultProject": "serial-blok-web",
+  "schematics": {
+    "@nrwl/angular": {
+      "application": {
+        "linter": "eslint"
+      },
+      "library": {
+        "linter": "eslint"
+      },
+      "storybook-configuration": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/angular:application": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "scss"
+    }
+  },
+  "projects": {
+    "serial-blok-web": {
+      "projectType": "application",
+      "root": "apps/serial-blok-web",
+      "sourceRoot": "apps/serial-blok-web/src",
+      "prefix": "serial-blok-app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/serial-blok-web",
+            "index": "apps/serial-blok-web/src/index.html",
+            "main": "apps/serial-blok-web/src/main.ts",
+            "polyfills": "apps/serial-blok-web/src/polyfills.ts",
+            "tsConfig": "apps/serial-blok-web/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/serial-blok-web/src/favicon.ico",
+              "apps/serial-blok-web/src/assets"
+            ],
+            "styles": ["apps/serial-blok-web/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/serial-blok-web/src/environments/environment.ts",
+                  "with": "apps/serial-blok-web/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "serial-blok-web:build",
+            "port": 4200,
+            "host": "localhost",
+            "ssl": true
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "serial-blok-web:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "serial-blok-web:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/serial-blok-web/src/**/*.ts",
+              "apps/serial-blok-web/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/serial-blok-web"],
+          "options": {
+            "jestConfig": "apps/serial-blok-web/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "serial-blok-web-e2e": {
+      "root": "apps/serial-blok-web-e2e",
+      "sourceRoot": "apps/serial-blok-web-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/serial-blok-web-e2e/cypress.json",
+            "tsConfig": "apps/serial-blok-web-e2e/tsconfig.e2e.json",
+            "devServerTarget": "serial-blok-web:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "serial-blok-web:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/serial-blok-web-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    }
+  }
+}

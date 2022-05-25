@@ -1,0 +1,23 @@
+# default
+* PhDs @beat.lang @klaus.flatz @johannes.tuertscher @yannick.hutter
+
+# Team CloudBreakers
+source/apps/buhler-insights/src/app/administration/components/digital-service/ @stefan.hoeliner
+source/apps/buhler-insights/src/app/administration/components/digital-service-access/ @stefan.hoeliner
+source/apps/buhler-insights/src/app/administration/components/digital-service-contract/ @stefan.hoeliner
+source/apps/buhler-insights/src/app/administration/components/plant/ @stefan.hoeliner
+source/apps/buhler-insights/src/app/administration/components/plant-group/ @stefan.hoeliner
+source/apps/buhler-insights/src/app/administration/components/machine/ @stefan.hoeliner
+source/apps/buhler-insights/src/app/administration/components/user/ @stefan.hoeliner
+source/apps/buhler-insights/src/app/administration/components/user-group/ @stefan.hoeliner
+source/apps/buhler-insights/src/app/administration/components/user-group-member/ @stefan.hoeliner
+source/apps/buhler-insights/src/app/operation/components/rule/ @stefan.hoeliner
+source/apps/buhler-insights/src/app/operation/components/contact/ @stefan.hoeliner
+
+# Team Avengers
+source/apps/buhler-insights/src/app/administration/components/edge-agent-management/ @abhishek.kumar
+source/apps/buhler-insights/src/app/administration/components/edge-module-management/ @abhishek.kumar
+source/apps/buhler-insights/src/app/administration/components/edge-agent/ @abhishek.kumar
+source/apps/buhler-insights/src/app/edge-agent-demo/ @abhishek.kumar
+
+source/apps/buhler-insights/src/app/operation/components/widget/table-widget/edge-module-command/ @abhishek.kumar

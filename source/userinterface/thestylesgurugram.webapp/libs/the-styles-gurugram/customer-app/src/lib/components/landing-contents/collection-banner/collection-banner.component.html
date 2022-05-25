@@ -1,0 +1,25 @@
+<section class="pb-0 ratio2_1">
+  <div class="container">
+    <div class="row partition2">
+      <div *ngFor="let banner of banners" class="col-md-6">
+        <a href="#">
+          <div class="collection-banner p-right text-center">
+            <div class="img-part">
+              <img
+                src="{{ banner.image }}"
+                class="img-fluid blur-up lazyload bg-img"
+                alt=""
+              />
+            </div>
+            <div class="contain-banner">
+              <div>
+                <h4>{{ banner.offer }}</h4>
+                <h2>{{ banner.title }}</h2>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

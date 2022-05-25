@@ -1,0 +1,12 @@
+﻿<div id="result"></div>
+<br/>
+<input type="date" id="date"/>
+
+<script>
+    var s = document.getElementById("date");
+    var re = document.getElementById("result");
+    s.onchange = function (s) {
+        
+        re.innerHTML = s.target.valueAsDate.toString();
+    }
+</script>

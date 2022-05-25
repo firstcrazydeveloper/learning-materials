@@ -1,0 +1,32 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "app/*": ["apps/the-styles-gurugram/src/app/*"],
+      "@simaira-digital/the-styles-gurugram/shared": [
+        "libs/the-styles-gurugram/shared/src/index.ts"
+      ],
+      "@simaira-digital/the-styles-gurugram/seller-app": [
+        "libs/the-styles-gurugram/seller-app/src/index.ts"
+      ],
+      "@simaira-digital/the-styles-gurugram/customer-app": [
+        "libs/the-styles-gurugram/customer-app/src/index.ts"
+      ]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

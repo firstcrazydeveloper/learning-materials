@@ -1,0 +1,20 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "simaira-customer-app",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "simaira-customer-app",
+      "kebab-case"
+    ]
+  },
+  "linterOptions": {
+    "exclude": ["!**/*"]
+  }
+}

@@ -1,0 +1,22 @@
+<div>
+  <img
+    src="../../assets/images/icon/setting.png"
+    class="img-fluid blur-up lazyload"
+    alt=""
+  />
+  <i class="ti-settings"></i>
+</div>
+<div class="show-div setting">
+  <h6>{{ languageTitle }}</h6>
+  <ul>
+    <li *ngFor="let language of languages">
+      <a href="#">{{ language }}</a>
+    </li>
+  </ul>
+  <h6>{{ currencyTitle }}</h6>
+  <ul class="list-inline">
+    <li *ngFor="let currency of currencies">
+      <a href="#">{{ currency }}</a>
+    </li>
+  </ul>
+</div>

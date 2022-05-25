@@ -1,0 +1,22 @@
+<section class="p-0">
+  <div class="slide-1 home-slider">
+    <div *ngFor="let slide of sliders">
+      <div class="home text-center">
+        <img src="{{ slide.image }}" alt="" class="bg-img blur-up lazyload" />
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="slider-contain">
+                <div>
+                  <h4>{{ slide.title }}</h4>
+                  <h1>{{ slide.message }}</h1>
+                  <a href="#" class="btn btn-solid">{{ shopNow }}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

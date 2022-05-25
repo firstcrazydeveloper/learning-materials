@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Abhishek_POC_BusinessModel.BusinessObjectsModel" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Abhishek_POC_BusinessModel.BusinessObjectsModel" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:20988/EmployeeServices/EmployeeService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Abhishek_POC_BusinessModel.Utility" />
+  <xs:complexType name="ArrayOfEmployeeModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EmployeeModel" nillable="true" type="tns:EmployeeModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmployeeModel" nillable="true" type="tns:ArrayOfEmployeeModel" />
+  <xs:complexType name="EmployeeModel">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Abhishek_POC_BusinessModel.Utility" base="q1:EventBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Contact" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Department" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EmpId" type="xs:int" />
+          <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EmployeeModel" nillable="true" type="tns:EmployeeModel" />
+</xs:schema>

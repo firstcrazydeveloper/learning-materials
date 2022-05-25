@@ -1,0 +1,18 @@
+{
+    "environmentName": "dev",
+    "imageServerUrl": "http://images.thestylesgurugram.com/images",
+    "authParams": {
+        "issuer": "https://sts.windows.net/c76376d2-88e5-47c1-8aa0-3fb0cb9fc8f7/",
+        "loginUrl": "https://login.microsoftonline.com/c76376d2-88e5-47c1-8aa0-3fb0cb9fc8f7/oauth2/authorize",
+        "logoutUrl": "https://login.microsoftonline.com/c76376d2-88e5-47c1-8aa0-3fb0cb9fc8f7/oauth2/logout",
+        "clientId": "7308a200-983e-4543-a9d0-2f5b186fa510",
+        "resource": "00000002-0000-0000-c000-000000000000",
+        "scope": "openid profile email",
+        "oidc": true
+    },
+    "features": {
+        "admin": false,
+        "contact": true
+    },
+    "appInsightsInstrumentationKey": "493e6b6d-bac4-4232-ad81-bfb89008b6d0"
+}

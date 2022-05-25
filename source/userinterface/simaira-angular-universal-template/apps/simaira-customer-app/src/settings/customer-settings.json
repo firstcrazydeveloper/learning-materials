@@ -1,0 +1,665 @@
+{
+  "service": {
+    "freeShiping": "free shipping",
+    "freeShipingMessage": "free shipping Delhi/NCR",
+    "customerService": "24 X 7 service",
+    "customerServiceMessage": "online service for customer",
+    "offer": "festival offer",
+    "offerMessage": "grab new special navratri offer"
+  },
+  "headerMenuSetting": {
+    "back": "Back",
+    "menus": [
+      {
+        "name": "Home",
+        "isChild": true,
+        "isNew": false,
+        "url": "",
+        "navMenus": [
+          {
+            "name": "Man",
+            "isChild": false,
+            "isNew": false,
+            "url": "",
+            "menus": null
+          },
+          {
+            "name": "Woman",
+            "isChild": false,
+            "isNew": false,
+            "url": "",
+            "menus": null
+          },
+          {
+            "name": "Child",
+            "isChild": false,
+            "isNew": true,
+            "url": "",
+            "menus": null
+          }
+        ],
+        "isMega": false
+      },
+      {
+        "name": "Accessories",
+        "isChild": true,
+        "isNew": true,
+        "url": "",
+        "navMenus": [
+          {
+            "name": "Caps & Hats",
+            "isChild": false,
+            "isNew": true,
+            "url": "",
+            "menus": null
+          },
+          {
+            "name": "Ties & Handkerchief",
+            "isChild": false,
+            "isNew": false,
+            "url": "",
+            "menus": null
+          },
+          {
+            "name": "Undergarments",
+            "isChild": true,
+            "isNew": false,
+            "url": "",
+            "menus": [
+              {
+                "name": "Man",
+                "url": "",
+                "isNew": false,
+                "isTrend": false,
+                "isCount": false,
+                "count": "0"
+              },
+              {
+                "name": "Woman",
+                "url": "",
+                "isNew": false,
+                "isTrend": false,
+                "isCount": false,
+                "count": "0"
+              },
+              {
+                "name": "Child",
+                "url": "",
+                "isNew": false,
+                "isTrend": false,
+                "isCount": false,
+                "count": "0"
+              }
+            ]
+          }
+        ],
+        "isMega": false
+      },
+      {
+        "name": "Cloths",
+        "isChild": true,
+        "isNew": false,
+        "url": "",
+        "navMenus": [
+          {
+            "name": "Man",
+            "isChild": true,
+            "isNew": false,
+            "url": "",
+            "menus": [
+              {
+                "name": "Jeans",
+                "url": "",
+                "isNew": false,
+                "isTrend": false,
+                "isCount": false,
+                "count": "0"
+              },
+              {
+                "name": "Shirt",
+                "url": "",
+                "isNew": false,
+                "isTrend": false,
+                "isCount": false,
+                "count": "0"
+              },
+              {
+                "name": "Polo T-Shirt",
+                "url": "",
+                "isNew": true,
+                "isTrend": false,
+                "isCount": false,
+                "count": "50"
+              },
+              {
+                "name": "Round Neck T-Shirt",
+                "url": "",
+                "isNew": false,
+                "isTrend": true,
+                "isCount": false,
+                "count": "0"
+              }
+            ]
+          },
+          {
+            "name": "Woman",
+            "isChild": true,
+            "isNew": false,
+            "url": "",
+            "menus": [
+              {
+                "name": "Jeans",
+                "url": "",
+                "isNew": false,
+                "isTrend": false,
+                "isCount": false,
+                "count": "0"
+              },
+              {
+                "name": "Shirt",
+                "url": "",
+                "isNew": false,
+                "isTrend": false,
+                "isCount": false,
+                "count": "0"
+              },
+              {
+                "name": "T-Shirt",
+                "url": "",
+                "isNew": true,
+                "isTrend": false,
+                "isCount": false,
+                "count": "30"
+              },
+              {
+                "name": "Tops",
+                "url": "",
+                "isNew": false,
+                "isTrend": true,
+                "isCount": false,
+                "count": "0"
+              },
+              {
+                "name": "Kurti",
+                "url": "",
+                "isNew": false,
+                "isTrend": true,
+                "isCount": false,
+                "count": "0"
+              },
+              {
+                "name": "Party Dress",
+                "url": "",
+                "isNew": false,
+                "isTrend": true,
+                "isCount": false,
+                "count": "0"
+              }
+            ]
+          },
+          {
+            "name": "Child",
+            "isChild": true,
+            "isNew": false,
+            "url": "",
+            "menus": [
+              {
+                "name": "Jeans",
+                "url": "",
+                "isNew": false,
+                "isTrend": false,
+                "isCount": false,
+                "count": "0"
+              },
+              {
+                "name": "Shirt",
+                "url": "",
+                "isNew": false,
+                "isTrend": false,
+                "isCount": false,
+                "count": "0"
+              },
+              {
+                "name": "Polo T-Shirt",
+                "url": "",
+                "isNew": true,
+                "isTrend": false,
+                "isCount": false,
+                "count": "0"
+              },
+              {
+                "name": "Round Neck T-Shirt",
+                "url": "",
+                "isNew": false,
+                "isTrend": false,
+                "isCount": false,
+                "count": "0"
+              }
+            ]
+          }
+        ],
+        "isMega": true
+      },
+      {
+        "name": "Gallery",
+        "isChild": false,
+        "isNew": true,
+        "url": "",
+        "navMenus": [],
+        "isMega": true
+      },
+      {
+        "name": "About Us",
+        "isChild": false,
+        "isNew": false,
+        "url": "",
+        "navMenus": [],
+        "isMega": true
+      }
+    ]
+  },
+  "collectionBanners": [
+    {
+      "image": "http://images.thestylesgurugram.com/images/banners/sub-banner1.jpg",
+      "title": "men",
+      "offer": "save 15%"
+    },
+    {
+      "image": "http://images.thestylesgurugram.com/images/banners/sub-banner2.jpg",
+      "title": "women",
+      "offer": "save 40%"
+    }
+  ],
+  "topCollection": {
+    "sectionTitle": "special offer",
+    "sectionSubTitle": "top collection",
+    "sectionMessage": "Why go anywhere else when you could come to Best Garments Store to get favorite dresses for all categories",
+    "items": [
+      {
+        "frontImage": "http://images.thestylesgurugram.com/images/home/top/27.jpg",
+        "backImage": "http://images.thestylesgurugram.com/images/home/top/28.jpg",
+        "url": "",
+        "star": 5,
+        "name": "Slim Fit Cotton Shirt",
+        "discountPrice": 500,
+        "actualPrice": 0,
+        "colors": ["bg-light0", "bg-light1", "bg-light2"],
+        "brand": "",
+        "category": "",
+        "description": "",
+        "gender": "",
+        "images": [],
+        "sellerId": "thetylesGurugram",
+        "sellerName": "thetylesGurugram",
+        "size": "32",
+        "warehouseId": "Gurugram"
+      },
+      {
+        "frontImage": "http://images.thestylesgurugram.com/images/home/top/1.jpg",
+        "backImage": "http://images.thestylesgurugram.com/images/home/top/2.jpg",
+        "url": "",
+        "star": 4,
+        "name": "Slim Fit Cotton Shirt",
+        "discountPrice": 500,
+        "actualPrice": 600,
+        "colors": ["bg-light0", "bg-light1", "bg-light3"],
+        "brand": "",
+        "category": "",
+        "description": "",
+        "gender": "",
+        "images": [],
+        "sellerId": "thetylesGurugram",
+        "sellerName": "thetylesGurugram",
+        "size": "32",
+        "warehouseId": "Gurugram"
+      },
+      {
+        "frontImage": "http://images.thestylesgurugram.com/images/home/top/33.jpg",
+        "backImage": "http://images.thestylesgurugram.com/images/home/top/34.jpg",
+        "url": "",
+        "star": 3,
+        "name": "Slim Fit Cotton Shirt",
+        "discountPrice": 500,
+        "actualPrice": 0,
+        "colors": ["bg-light0", "bg-light1", "bg-light2"],
+        "brand": "",
+        "category": "",
+        "description": "",
+        "gender": "",
+        "images": [],
+        "sellerId": "thetylesGurugram",
+        "sellerName": "thetylesGurugram",
+        "size": "32",
+        "warehouseId": "Gurugram"
+      },
+      {
+        "frontImage": "http://images.thestylesgurugram.com/images/home/top/35.jpg",
+        "backImage": "http://images.thestylesgurugram.com/images/home/top/36.jpg",
+        "url": "",
+        "star": 5,
+        "name": "Slim Fit Cotton Shirt",
+        "discountPrice": 500,
+        "actualPrice": 0,
+        "colors": ["bg-light0", "bg-light1", "bg-light2"],
+        "brand": "",
+        "category": "",
+        "description": "",
+        "gender": "",
+        "images": [],
+        "sellerId": "thetylesGurugram",
+        "sellerName": "thetylesGurugram",
+        "size": "32",
+        "warehouseId": "Gurugram"
+      }
+    ]
+  },
+  "parallaxBanner": {
+    "image": "http://images.thestylesgurugram.com/images/banners/parallax/1.jpg",
+    "title": "Winter 2020",
+    "subtitle": "latest fashion trends",
+    "offer": "festive special offer"
+  },
+  "tabProduct": {
+    "title": "special products",
+    "heading": "exclusive products",
+    "tabs": [
+      {
+        "name": "New Products",
+        "id": "tab-4",
+        "isActive": true,
+        "items": [
+          {
+            "frontImage": "http://images.thestylesgurugram.com/images/home/tab/27.jpg",
+            "backImage": "http://images.thestylesgurugram.com/images/home/tab/28.jpg",
+            "url": "",
+            "star": 5,
+            "name": "Slim Fit Cotton Shirt",
+            "discountPrice": 500,
+            "actualPrice": 0,
+            "colors": ["bg-light0", "bg-light1", "bg-light2"],
+            "brand": "",
+            "category": "",
+            "description": "",
+            "gender": "",
+            "images": [],
+            "sellerId": "thetylesGurugram",
+            "sellerName": "thetylesGurugram",
+            "size": "32",
+            "warehouseId": "Gurugram"
+          },
+          {
+            "frontImage": "http://images.thestylesgurugram.com/images/home/tab/1.jpg",
+            "backImage": "http://images.thestylesgurugram.com/images/home/tab/2.jpg",
+            "url": "",
+            "star": 4,
+            "name": "Slim Fit Cotton Shirt",
+            "discountPrice": 500,
+            "actualPrice": 600,
+            "colors": ["bg-light0", "bg-light1", "bg-light3"],
+            "brand": "",
+            "category": "",
+            "description": "",
+            "gender": "",
+            "images": [],
+            "sellerId": "thetylesGurugram",
+            "sellerName": "thetylesGurugram",
+            "size": "32",
+            "warehouseId": "Gurugram"
+          },
+          {
+            "frontImage": "http://images.thestylesgurugram.com/images/home/tab/33.jpg",
+            "backImage": "http://images.thestylesgurugram.com/images/home/tab/34.jpg",
+            "url": "",
+            "star": 3,
+            "name": "Slim Fit Cotton Shirt",
+            "discountPrice": 500,
+            "actualPrice": 0,
+            "colors": ["bg-light0", "bg-light1", "bg-light2"],
+            "brand": "",
+            "category": "",
+            "description": "",
+            "gender": "",
+            "images": [],
+            "sellerId": "thetylesGurugram",
+            "sellerName": "thetylesGurugram",
+            "size": "32",
+            "warehouseId": "Gurugram"
+          },
+          {
+            "frontImage": "http://images.thestylesgurugram.com/images/home/tab/35.jpg",
+            "backImage": "http://images.thestylesgurugram.com/images/home/tab/36.jpg",
+            "url": "",
+            "star": 5,
+            "name": "Slim Fit Cotton Shirt",
+            "discountPrice": 500,
+            "actualPrice": 0,
+            "colors": ["bg-light0", "bg-light1", "bg-light2"],
+            "brand": "",
+            "category": "",
+            "description": "",
+            "gender": "",
+            "images": [],
+            "sellerId": "thetylesGurugram",
+            "sellerName": "thetylesGurugram",
+            "size": "32",
+            "warehouseId": "Gurugram"
+          }
+        ]
+      },
+      {
+        "name": "Featured Products",
+        "id": "tab-5",
+        "isActive": false,
+        "items": [
+          {
+            "frontImage": "http://images.thestylesgurugram.com/images/home/tab/27.jpg",
+            "backImage": "http://images.thestylesgurugram.com/images/home/tab/28.jpg",
+            "url": "",
+            "star": 5,
+            "name": "Slim Fit Cotton Shirt",
+            "discountPrice": 500,
+            "actualPrice": 0,
+            "colors": ["bg-light0", "bg-light1", "bg-light2"],
+            "brand": "",
+            "category": "",
+            "description": "",
+            "gender": "",
+            "images": [],
+            "sellerId": "thetylesGurugram",
+            "sellerName": "thetylesGurugram",
+            "size": "32",
+            "warehouseId": "Gurugram"
+          },
+          {
+            "frontImage": "http://images.thestylesgurugram.com/images/home/tab/1.jpg",
+            "backImage": "http://images.thestylesgurugram.com/images/home/tab/2.jpg",
+            "url": "",
+            "star": 4,
+            "name": "Slim Fit Cotton Shirt",
+            "discountPrice": 500,
+            "actualPrice": 600,
+            "colors": ["bg-light0", "bg-light1", "bg-light3"],
+            "brand": "",
+            "category": "",
+            "description": "",
+            "gender": "",
+            "images": [],
+            "sellerId": "thetylesGurugram",
+            "sellerName": "thetylesGurugram",
+            "size": "32",
+            "warehouseId": "Gurugram"
+          },
+          {
+            "frontImage": "http://images.thestylesgurugram.com/images/home/tab/33.jpg",
+            "backImage": "http://images.thestylesgurugram.com/images/home/tab/34.jpg",
+            "url": "",
+            "star": 3,
+            "name": "Slim Fit Cotton Shirt",
+            "discountPrice": 500,
+            "actualPrice": 0,
+            "colors": ["bg-light0", "bg-light1", "bg-light2"],
+            "brand": "",
+            "category": "",
+            "description": "",
+            "gender": "",
+            "images": [],
+            "sellerId": "thetylesGurugram",
+            "sellerName": "thetylesGurugram",
+            "size": "32",
+            "warehouseId": "Gurugram"
+          },
+          {
+            "frontImage": "http://images.thestylesgurugram.com/images/home/tab/35.jpg",
+            "backImage": "http://images.thestylesgurugram.com/images/home/tab/36.jpg",
+            "url": "",
+            "star": 5,
+            "name": "Slim Fit Cotton Shirt",
+            "discountPrice": 500,
+            "actualPrice": 0,
+            "colors": ["bg-light0", "bg-light1", "bg-light2"],
+            "brand": "",
+            "category": "",
+            "description": "",
+            "gender": "",
+            "images": [],
+            "sellerId": "thetylesGurugram",
+            "sellerName": "thetylesGurugram",
+            "size": "32",
+            "warehouseId": "Gurugram"
+          }
+        ]
+      },
+      {
+        "name": "Best Sellers",
+        "id": "tab-6",
+        "isActive": false,
+        "items": [
+          {
+            "frontImage": "http://images.thestylesgurugram.com/images/home/tab/27.jpg",
+            "backImage": "http://images.thestylesgurugram.com/images/home/tab/28.jpg",
+            "url": "",
+            "star": 5,
+            "name": "Slim Fit Cotton Shirt",
+            "discountPrice": 500,
+            "actualPrice": 0,
+            "colors": ["bg-light0", "bg-light1", "bg-light2"],
+            "brand": "",
+            "category": "",
+            "description": "",
+            "gender": "",
+            "images": [],
+            "sellerId": "thetylesGurugram",
+            "sellerName": "thetylesGurugram",
+            "size": "32",
+            "warehouseId": "Gurugram"
+          },
+          {
+            "frontImage": "http://images.thestylesgurugram.com/images/home/tab/1.jpg",
+            "backImage": "http://images.thestylesgurugram.com/images/home/tab/2.jpg",
+            "url": "",
+            "star": 4,
+            "name": "Slim Fit Cotton Shirt",
+            "discountPrice": 500,
+            "actualPrice": 600,
+            "colors": ["bg-light0", "bg-light1", "bg-light3"],
+            "brand": "",
+            "category": "",
+            "description": "",
+            "gender": "",
+            "images": [],
+            "sellerId": "thetylesGurugram",
+            "sellerName": "thetylesGurugram",
+            "size": "32",
+            "warehouseId": "Gurugram"
+          },
+          {
+            "frontImage": "http://images.thestylesgurugram.com/images/home/tab/33.jpg",
+            "backImage": "http://images.thestylesgurugram.com/images/home/tab/34.jpg",
+            "url": "",
+            "star": 3,
+            "name": "Slim Fit Cotton Shirt",
+            "discountPrice": 500,
+            "actualPrice": 0,
+            "colors": ["bg-light0", "bg-light1", "bg-light2"],
+            "brand": "",
+            "category": "",
+            "description": "",
+            "gender": "",
+            "images": [],
+            "sellerId": "thetylesGurugram",
+            "sellerName": "thetylesGurugram",
+            "size": "32",
+            "warehouseId": "Gurugram"
+          },
+          {
+            "frontImage": "http://images.thestylesgurugram.com/images/home/tab/35.jpg",
+            "backImage": "http://images.thestylesgurugram.com/images/home/tab/36.jpg",
+            "url": "",
+            "star": 5,
+            "name": "Slim Fit Cotton Shirt",
+            "discountPrice": 500,
+            "actualPrice": 0,
+            "colors": ["bg-light0", "bg-light1", "bg-light2"],
+            "brand": "",
+            "category": "",
+            "description": "",
+            "gender": "",
+            "images": [],
+            "sellerId": "thetylesGurugram",
+            "sellerName": "thetylesGurugram",
+            "size": "32",
+            "warehouseId": "Gurugram"
+          }
+        ]
+      }
+    ]
+  },
+  "topHeader": {
+    "accountMenus": ["Login", "Logout"],
+    "contacts": ["91-9810795480", "91-9654095588"],
+    "topHeaderMessage": "Welcome to Our store The Style",
+    "myAccount": "My Account"
+  },
+  "customerSettings": {
+    "languageTitle": "language",
+    "currencyTitle": "currency",
+    "languages": [
+      {"en" : "English"},
+      {"hi" : "Hindi"}
+    ],
+    "currencies": ["rupees"]
+  },
+  "cart-details": {
+    "items": [
+      {
+        "name": "Levis Jeans",
+        "image": "http://images.thestylesgurugram.com/images/products/men/Jeans01.jpg",
+        "price": 2999,
+        "quantity": 1
+      },
+      {
+        "name": "Peter England Shirt",
+        "image": "http://images.thestylesgurugram.com/images/products/men/Shirt01.jpg",
+        "price": 1999,
+        "quantity": 1
+      }
+    ],
+    "subtotal": "4998",
+    "totalItems": 2
+  },
+  "homeSliderSettings": {
+    "shopNow": "shop now",
+    "sliders": [
+      {
+        "image": "http://images.thestylesgurugram.com/images/home/banner/1.jpg",
+        "title": "welcome to fashion",
+        "message": "Men fashion"
+      },
+      {
+        "image": "http://images.thestylesgurugram.com/images/home/banner/2.jpg",
+        "title": "welcome to fashion",
+        "message": "women fashion"
+      }
+    ]
+  }
+}

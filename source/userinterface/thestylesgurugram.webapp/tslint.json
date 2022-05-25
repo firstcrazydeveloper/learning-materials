@@ -1,0 +1,162 @@
+{
+  "rulesDirectory": ["node_modules/@nrwl/workspace/src/tslint", "node_modules/codelyzer", "./libs/the-styles-gurugram/shared/ts-lint-rules"],
+  "extends": ["tslint-consistent-codestyle", "tslint-defocus", "rxjs-tslint-rules"],
+  "rules": {
+      "forbidden-strings": [
+          true,
+          {
+              "forbiddenString": "JSON.parse(JSON.stringify",
+              "suggestion": "CloneHelper.clone()"
+          }
+      ],
+      "align": true,
+      "arrow-return-shorthand": true,
+      "callable-types": true,
+      "class-name": true,
+      "comment-format": [true, "check-space"],
+      "deprecation": {
+          "severity": "warn"
+      },
+      "forin": true,
+      "import-blacklist": [true, "rxjs/Rx"],
+      "interface-over-type-literal": true,
+      "import-spacing": true,
+      "indent": [true, "spaces", 4],
+      "label-position": true,
+      "max-line-length": [true, 180],
+      "adjacent-overload-signatures": true,
+      "member-access": [true, "check-accessor", "check-constructor", "check-parameter-property"],
+      "member-ordering": [
+          true,
+          {
+              "order": ["static-field", "instance-field", "static-method", "instance-method"]
+          }
+      ],
+      "naming-convention": [
+          true,
+          {
+              "type": "namespace",
+              "format": "PascalCase"
+          },
+          {
+              "type": "interface",
+              "format": "PascalCase"
+          },
+          {
+              "type": "enum",
+              "format": "PascalCase"
+          },
+          {
+              "type": "property",
+              "format": "camelCase"
+          },
+          {
+              "type": "method",
+              "format": "camelCase"
+          },
+          {
+              "type": "enumMember",
+              "format": "PascalCase"
+          },
+          {
+              "type": "member",
+              "modifiers": "private",
+              "leadingUnderscore": "allow"
+          }
+      ],
+      "no-arg": true,
+      "no-bitwise": true,
+      "nx-enforce-module-boundaries": [
+          true,
+          {
+              "allow": [],
+              "depConstraints": [
+                  {
+                      "sourceTag": "name:the-styles-gurugram",
+                      "onlyDependOnLibsWithTags": ["type:lib", "scope:the-styles-gurugram", "scope:deprecated-components"]
+                  },
+                  {
+                      "sourceTag": "name:the-styles-gurugram-shared",
+                      "onlyDependOnLibsWithTags": ["type:lib", "scope:deprecated-components"]
+                  },
+                  {
+                      "sourceTag": "name:the-styles-gurugram-customer-app",
+                      "onlyDependOnLibsWithTags": ["type:lib", "name:the-styles-gurugram-shared", "scope:deprecated-components"]
+                  },
+                  {
+                      "sourceTag": "name:the-styles-gurugram-seller-app",
+                      "onlyDependOnLibsWithTags": ["type:lib", "name:the-styles-gurugram-shared", "scope:deprecated-components"]
+                  }
+              ],
+              "enforceBuildableLibDependency": true
+          }
+      ],
+      "no-conflicting-lifecycle": true,
+      "no-host-metadata-property": true,
+      "no-inputs-metadata-property": true,
+      "no-output-native": true,
+      "no-outputs-metadata-property": true,
+      "template-banana-in-box": true,
+      "no-magic-numbers": true,
+      "semicolon": [true, "always", "strict-bound-class-methods"],
+      "no-unnecessary-type-assertion": true,
+      "curly": true,
+      "defocus": true,
+      "eofline": true,
+      "no-conditional-assignment": true,
+      "no-consecutive-blank-lines": true,
+      "no-console": true,
+      "no-construct": true,
+      "no-debugger": true,
+      "no-duplicate-super": true,
+      "no-duplicate-switch-case": true,
+      "no-empty": false,
+      "no-empty-interface": true,
+      "no-eval": true,
+      "no-inferrable-types": [true, "ignore-params"],
+      "no-misused-new": true,
+      "no-non-null-assertion": true,
+      "no-shadowed-variable": true,
+      "no-string-literal": false,
+      "no-string-throw": true,
+      "no-switch-case-fall-through": true,
+      "no-trailing-whitespace": true,
+      "no-unnecessary-initializer": true,
+      "no-unused-expression": true,
+      "no-var-keyword": true,
+      "object-literal-sort-keys": false,
+      "one-line": [true, "check-open-brace", "check-catch", "check-else", "check-whitespace"],
+      "prefer-const": true,
+      "prefer-template": true,
+      "quotemark": [true, "single", "avoid-escape"],
+      "radix": true,
+      "triple-equals": [true, "allow-null-check"],
+      "typedef-whitespace": [
+          true,
+          {
+              "call-signature": "nospace",
+              "index-signature": "nospace",
+              "parameter": "nospace",
+              "property-declaration": "nospace",
+              "variable-declaration": "nospace"
+          }
+      ],
+      "type-literal-delimiter": true,
+      "unified-signatures": true,
+      "whitespace": [true, "check-module", "check-branch", "check-decl", "check-operator", "check-separator", "check-type"],
+      "directive-selector": [true, "attribute", [], "camelCase"],
+      "component-selector": [true, "element", [], "kebab-case"],
+      "no-attribute-decorator": true,
+      "no-input-rename": true,
+      "no-output-on-prefix": true,
+      "no-output-rename": true,
+      "no-forward-ref": true,
+      "use-lifecycle-interface": true,
+      "use-pipe-transform-interface": true,
+      "component-max-inline-declarations": true,
+      "no-lifecycle-call": true,
+      "component-class-suffix": [true, "Component"],
+      "directive-class-suffix": [true, "Directive"],
+      "rxjs-no-unsafe-takeuntil": true
+  }
+}

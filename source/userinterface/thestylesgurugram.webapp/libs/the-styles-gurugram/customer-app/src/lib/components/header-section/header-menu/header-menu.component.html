@@ -1,0 +1,99 @@
+<div class="menu-right pull-right">
+  <div>
+    <nav id="main-nav">
+      <div class="toggle-nav">
+        <i class="fa fa-bars sidebar-bar"></i>
+      </div>
+      <ul id="main-menu" class="sm pixelstrap sm-horizontal">
+        <li>
+          <div class="mobile-back text-right">
+            {{ back }}<i class="fa fa-angle-right pl-2" aria-hidden="true"></i>
+          </div>
+        </li>
+        <li
+          *ngFor="let menu of headerMenu"
+          class="{{ getMegaClass(menu.isMega) }}"
+          id="{{ getMegaMenuId(menu.isMega) }}"
+        >
+          <a href="#"
+            >{{ menu.name }}
+            <div *ngIf="menu.isNew" class="lable-nav">new</div>
+          </a>
+          <ul *ngIf="menu.isChild && !menu.isMega">
+            <li *ngFor="let navMenu of menu.navMenus">
+              <a href="#">
+                {{ navMenu.name }}
+                <span *ngIf="navMenu.isNew" class="new-tag">new</span>
+              </a>
+              <ul *ngIf="navMenu.isChild">
+                <li *ngFor="let childMenu of navMenu.menus">
+                  <a href="#">{{ childMenu.name }}</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul
+            *ngIf="menu.isChild && menu.isMega"
+            class="mega-menu full-mega-menu"
+          >
+            <li>
+              <div class="container">
+                <div class="row">
+                  <div
+                    class="col mega-box"
+                    *ngFor="let navMenu of menu.navMenus"
+                  >
+                    <div class="link-section">
+                      <div class="menu-title">
+                        <h5>{{ navMenu.name }}</h5>
+                      </div>
+                      <div class="menu-content">
+                        <ul>
+                          <li
+                            *ngFor="let menuData of navMenu.menus"
+                            class="up-text"
+                          >
+                            <a href="#">
+                              {{ menuData.name }}
+                              <i
+                                *ngIf="menuData.isTrend"
+                                class="fa fa-bolt icon-trend"
+                                aria-hidden="true"
+                              ></i>
+                              <span *ngIf="menuData.isCount"
+                                >{{ menuData.count }}+</span
+                              >
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div>
+    <div class="icon-nav">
+      <ul>
+        <li class="onhover-div mobile-search">
+          <simairadigital-customer-header-search></simairadigital-customer-header-search>
+        </li>
+        <li class="onhover-div mobile-setting">
+          <simairadigital-customer-header-settings
+            [settings]="settings"
+          ></simairadigital-customer-header-settings>
+        </li>
+        <li class="onhover-div mobile-cart">
+          <simairadigital-customer-header-cart
+            [settings]="settings"
+          ></simairadigital-customer-header-cart>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

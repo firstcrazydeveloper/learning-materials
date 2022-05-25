@@ -1,0 +1,309 @@
+{
+  "version": 1,
+  "projects": {
+    "simaira-customer-app": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/simaira-customer-app",
+      "sourceRoot": "apps/simaira-customer-app/src",
+      "prefix": "simaira",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/simaira-customer-app",
+            "index": "apps/simaira-customer-app/src/index.html",
+            "main": "apps/simaira-customer-app/src/main.ts",
+            "polyfills": "apps/simaira-customer-app/src/polyfills.ts",
+            "tsConfig": "apps/simaira-customer-app/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/simaira-customer-app/src/favicon.ico",
+              "apps/simaira-customer-app/src/assets"
+            ],
+            "styles": ["apps/simaira-customer-app/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/simaira-customer-app/src/environments/environment.ts",
+                  "with": "apps/simaira-customer-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "simaira-customer-app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "simaira-customer-app:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "simaira-customer-app:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/simaira-customer-app/tsconfig.app.json",
+              "apps/simaira-customer-app/tsconfig.spec.json",
+              "apps/simaira-customer-app/tsconfig.editor.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/simaira-customer-app/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/simaira-customer-app/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/apps/simaira-customer-app/server",
+            "main": "apps/simaira-customer-app/server.ts",
+            "tsConfig": "apps/simaira-customer-app/tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "apps/simaira-customer-app/src/environments/environment.ts",
+                  "with": "apps/simaira-customer-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "sourceMap": false,
+              "optimization": true
+            }
+          }
+        },
+        "local": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/apps/simaira-customer-app/server",
+            "main": "apps/simaira-customer-app/local-server.ts",
+            "tsConfig": "apps/simaira-customer-app/tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "apps/simaira-customer-app/src/environments/environment.ts",
+                  "with": "apps/simaira-customer-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "sourceMap": false,
+              "optimization": true
+            }
+          }
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "options": {
+            "browserTarget": "simaira-customer-app:build",
+            "serverTarget": "simaira-customer-app:server"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "simaira-customer-app:build:production",
+              "serverTarget": "simaira-customer-app:server:production"
+            }
+          }
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "browserTarget": "simaira-customer-app:build:production",
+            "serverTarget": "simaira-customer-app:server:production",
+            "routes": ["/"]
+          },
+          "configurations": {
+            "production": {}
+          }
+        }
+      }
+    },
+    "simaira-customer-app-e2e": {
+      "root": "apps/simaira-customer-app-e2e",
+      "sourceRoot": "apps/simaira-customer-app-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/simaira-customer-app-e2e/cypress.json",
+            "tsConfig": "apps/simaira-customer-app-e2e/tsconfig.e2e.json",
+            "devServerTarget": "simaira-customer-app:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "simaira-customer-app:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/simaira-customer-app-e2e/tsconfig.e2e.json"],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/simaira-customer-app-e2e/**/*"
+            ]
+          }
+        }
+      }
+    },
+    "simaira-customer-app-home": {
+      "projectType": "library",
+      "root": "libs/simaira-customer-app/home",
+      "sourceRoot": "libs/simaira-customer-app/home/src",
+      "prefix": "simaira",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/simaira-customer-app/home/tsconfig.lib.json",
+              "libs/simaira-customer-app/home/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/simaira-customer-app/home/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/simaira-customer-app/home/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "simaira-customer-app-shared": {
+      "projectType": "library",
+      "root": "libs/simaira-customer-app/shared",
+      "sourceRoot": "libs/simaira-customer-app/shared/src",
+      "prefix": "simaira",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/simaira-customer-app/shared/tsconfig.lib.json",
+              "libs/simaira-customer-app/shared/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/simaira-customer-app/shared/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/simaira-customer-app/shared/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/workspace": {
+      "library": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/cypress": {
+      "cypress-project": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/node": {
+      "application": {
+        "linter": "tslint"
+      },
+      "library": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/nest": {
+      "application": {
+        "linter": "tslint"
+      },
+      "library": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/express": {
+      "application": {
+        "linter": "tslint"
+      },
+      "library": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    }
+  },
+  "defaultProject": "simaira-customer-app"
+}

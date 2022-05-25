@@ -1,0 +1,57 @@
+{
+  "npmScope": "simaira-digital",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.base.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "accessToken": "YTM0ODM5ODEtNmY5Yi00NGJkLThhZTQtMzBlYjVmYzA1MDNifHJlYWQtd3JpdGU=",
+        "cacheableOperations": ["build", "test", "lint", "e2e"],
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
+      }
+    }
+  },
+  "projects": {
+    "the-styles-gurugram": {
+      "tags": ["type:app", "name:the-styles-gurugram"]
+    },
+    "the-styles-gurugram-e2e": {
+      "tags": ["type:e2e"],
+      "implicitDependencies": ["the-styles-gurugram"]
+    },
+    "the-styles-gurugram-shared": {
+      "tags": [
+        "type:lib",
+        "scope:the-styles-gurugram",
+        "name:the-styles-gurugram-shared"
+      ]
+    },
+    "the-styles-gurugram-seller-app": {
+      "tags": [
+        "type:lib",
+        "scope:the-styles-gurugram",
+        "name:the-styles-gurugram-seller-app"
+      ]
+    },
+    "the-styles-gurugram-customer-app": {
+      "tags": [
+        "type:lib",
+        "scope:the-styles-gurugram",
+        "name:the-styles-gurugram-customer-app"
+      ]
+    }
+  }
+}
