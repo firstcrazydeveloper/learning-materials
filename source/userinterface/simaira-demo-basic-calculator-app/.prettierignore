@@ -1,0 +1,9 @@
+# Add files here to ignore them from prettier formatting
+
+/dist
+/coverage
+/tools
+**/assets/**
+**/*.cake
+**/*.sh
+**/*.ps1

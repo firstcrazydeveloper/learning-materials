@@ -1,0 +1,220 @@
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+
+@media screen and (max-width: 1024px) {
+  h2.mask {
+    font-size: 145px;
+  }
+
+  .mask-container i {
+    color: #5d5b5b;
+  }
+}
+@media screen and (max-width: 768px) {
+  h2.mask {
+    width: 81%;
+  }
+
+  .mask-container i {
+    color: #5d5b5b;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  h2.mask {
+    cursor: pointer;
+    overflow: hidden;
+    background: url(../assets/images/cactus/text-bg.jpg);
+    background-position: 0 0;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    background-clip: text;
+    font-size: 90px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -9px;
+    margin: 250px auto 50px auto;
+    color: transparent;
+    text-align: center;
+    text-stroke: 5px;
+    width: 100%;
+  }
+
+  .mask-container i {
+    color: #5d5b5b;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  h2.mask {
+    cursor: pointer;
+    overflow: hidden;
+    background: url(../assets/images/cactus/text-bg.jpg);
+    background-position: 0 0;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    background-clip: text;
+    font-size: 90px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -9px;
+    margin: 250px auto 50px auto;
+    color: transparent;
+    text-align: center;
+    text-stroke: 5px;
+    width: 100%;
+  }
+  .mask-container i {
+    color: #5d5b5b;
+  }
+}
+@media screen and (max-width: 375px) {
+  h2.mask {
+    cursor: pointer;
+    overflow: hidden;
+    background: url(../assets/images/cactus/text-bg.jpg);
+    background-position: 0 0;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    background-clip: text;
+    font-size: 85px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    line-height: 1;
+    letter-spacing: -9px;
+    margin: 250px auto 50px auto;
+    color: transparent;
+    text-align: center;
+    text-stroke: 5px;
+    width: 100%;
+  }
+  .mask-container i {
+    color: #5d5b5b;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  h2.mask {
+    cursor: pointer;
+    overflow: hidden;
+    background: url(../assets/images/cactus/text-bg.jpg);
+    background-position: 0 0;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    background-clip: text;
+    font-size: 80px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    line-height: 1;
+    letter-spacing: -9px;
+    margin: 250px auto 50px auto;
+    color: transparent;
+    text-align: center;
+    text-stroke: 5px;
+    width: 100%;
+  }
+
+  .mask-container i {
+    color: #5d5b5b;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  h2.mask {
+    cursor: pointer;
+    overflow: hidden;
+    background: url(../assets/images/cactus/text-bg.jpg);
+    background-position: 0 0;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    background-clip: text;
+    font-size: 72px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    line-height: 1;
+    letter-spacing: -9px;
+    margin: 185px auto 50px auto;
+    color: transparent;
+    text-align: center;
+    text-stroke: 5px;
+    width: 100%;
+  }
+
+  .mask-container i {
+    color: #5d5b5b;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  h2.mask {
+    cursor: pointer;
+    overflow: hidden;
+    background: url(../assets/images/cactus/text-bg.jpg);
+    background-position: 0 0;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    background-clip: text;
+    font-size: 56px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    line-height: 1;
+    letter-spacing: -3px;
+    margin: 185px auto 50px auto;
+    color: transparent;
+    text-align: center;
+    text-stroke: 5px;
+    width: 100%;
+  }
+
+  .mask-container i {
+    color: #5d5b5b;
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  div.example {
+    font-size: 30px;
+  }
+}
+
+.landing ul {
+  padding-left: 60px !important;
+}
+
+.footer-section {
+  background: #eeeded;
+}
+
+.header-logo {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  color: #6e296b;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 1px;
+  padding-left: 4px;
+  padding-top: 9px;
+  text-transform: capitalize;
+}
+
+.flex-container img {
+  width: 32px;
+  height: 32px;
+}
+
+.landing ul li i {
+  margin-right: 1em;
+}
+
+.landing ul li {
+  margin-top: 10px !important;
+}

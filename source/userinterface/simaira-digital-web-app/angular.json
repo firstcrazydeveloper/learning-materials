@@ -1,0 +1,176 @@
+{
+  "version": 1,
+  "projects": {
+    "simaira-digital-web": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/simaira-digital-web",
+      "sourceRoot": "apps/simaira-digital-web/src",
+      "prefix": "simaira-digital",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/simaira-digital-web",
+            "index": "apps/simaira-digital-web/src/index.html",
+            "main": "apps/simaira-digital-web/src/main.ts",
+            "polyfills": "apps/simaira-digital-web/src/polyfills.ts",
+            "tsConfig": "apps/simaira-digital-web/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/simaira-digital-web/src/favicon.ico",
+              "apps/simaira-digital-web/src/assets"
+            ],
+            "styles": ["apps/simaira-digital-web/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/simaira-digital-web/src/environments/environment.ts",
+                  "with": "apps/simaira-digital-web/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "simaira-digital-web:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "simaira-digital-web:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "simaira-digital-web:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/simaira-digital-web/tsconfig.app.json",
+              "apps/simaira-digital-web/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/simaira-digital-web/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/simaira-digital-web/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "simaira-digital-web-e2e": {
+      "root": "apps/simaira-digital-web-e2e",
+      "sourceRoot": "apps/simaira-digital-web-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/simaira-digital-web-e2e/cypress.json",
+            "tsConfig": "apps/simaira-digital-web-e2e/tsconfig.e2e.json",
+            "devServerTarget": "simaira-digital-web:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "simaira-digital-web:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/simaira-digital-web-e2e/tsconfig.e2e.json"],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/simaira-digital-web-e2e/**/*"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/workspace": {
+      "library": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/cypress": {
+      "cypress-project": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/node": {
+      "application": {
+        "linter": "tslint"
+      },
+      "library": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/nest": {
+      "application": {
+        "linter": "tslint"
+      },
+      "library": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/express": {
+      "application": {
+        "linter": "tslint"
+      },
+      "library": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    }
+  },
+  "defaultProject": "simaira-digital-web"
+}
